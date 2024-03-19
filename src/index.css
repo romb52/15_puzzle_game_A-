@@ -38,6 +38,7 @@ header .dropdown-toggle {
 header .dropdown-menu {
   width: 6rem;
   margin-top: 10px;
+  background-color: #fff;
 }
 
 header .btn>svg {
@@ -202,6 +203,10 @@ button {
   background-color: #06a4f8;
 }
 
+[data-theme='dark'] header .dropdown-menu {
+  background-color: #6c757d;
+}
+
 [data-theme='dark'] main .btn:hover {
   background-color: #0064ae;
 }
@@ -267,10 +272,9 @@ button {
     display: none;
   }
 
-  .dropdown-menu {
-    width: 100vw;
-    background-color: #ffffff73;
-  }
+  header .dropdown-menu {
+    width: 100vw;    
+  } 
 
   .table-wrap {
     width: 90vw;
