@@ -10,5 +10,7 @@ margin: 0;
 }
 
 .footer a{
-    font-size: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
 }

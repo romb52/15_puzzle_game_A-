@@ -123,6 +123,7 @@ const App = () => {
         }
         else {
             setMessage("Mix to start");
+            handleResortClick();
         }
     };
 

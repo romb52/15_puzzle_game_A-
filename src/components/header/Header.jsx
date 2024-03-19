@@ -3,7 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTheme, setAutoTheme } from '../../share/reducers/theme.reducer';
 import { setBoardSize, } from '../../share/reducers/game.reducer';
-import {toggleSound} from '../../share/reducers/sound.reducer';
+import { toggleSound } from '../../share/reducers/sound.reducer';
 import Form from 'react-bootstrap/Form';
 import { TfiTimer } from "react-icons/tfi";
 import { GiMove } from "react-icons/gi";
@@ -15,7 +15,7 @@ import { GiSoundOn, GiSoundOff } from "react-icons/gi";
 
 
 
-const Header = () => { 
+const Header = () => {
 
     const dispatch = useDispatch();
     const theme = useSelector((state) => state.theme);
@@ -26,7 +26,7 @@ const Header = () => {
     const minStep = useSelector((state) => state.game[`minStep${boardSize}`]);
     const soundOn = useSelector(state => state.sound.soundOn);
 
-   
+
     const handleThemeChange = (theme) => {
         if (theme === 'auto') {
             dispatch(setAutoTheme());
@@ -40,9 +40,9 @@ const Header = () => {
         dispatch(setBoardSize(event.target.value));
     };
 
-   const  changeSound = () =>{
-    dispatch(toggleSound());
-   }
+    const changeSound = () => {
+        dispatch(toggleSound());
+    }
 
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60); // Отримання хвилин
@@ -88,7 +88,7 @@ const Header = () => {
                         <p className="mb-0 d-flex align-items-center gap-1"><FaTrophy /><span className='hideIfMob'>Min Step:</span> {minStep}</p>
                     </div>
                     <Dropdown data-bs-theme={theme}>
-                        <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">                       
+                        <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
                             {themeIcons[theme]}
                         </Dropdown.Toggle>
 
